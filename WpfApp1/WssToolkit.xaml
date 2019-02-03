@@ -1,0 +1,24 @@
+﻿<Window x:Class="WpfApp1.WSSToolkit"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="54*"/>
+            <ColumnDefinition Width="25*"/>
+            <ColumnDefinition Width="713*"/>
+        </Grid.ColumnDefinitions>
+        <ListBox x:Name="lbxServers" Grid.Column="1" HorizontalAlignment="Left" Height="108" Margin="10,33,0,0" VerticalAlignment="Top" Width="136" Background="#FF52B092" Grid.ColumnSpan="2">
+            <ListBoxItem/>
+        </ListBox>
+        <Label x:Name="lblServers" Content="List of servers" Grid.Column="1" HorizontalAlignment="Left" Margin="10,7,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+        <Button x:Name="btnAll" Content="All Servers" Grid.Column="2" HorizontalAlignment="Left" Margin="134.807,33,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="btnAdd" Content="Add server" Grid.Column="2" HorizontalAlignment="Left" Margin="134.807,58,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="btnRemove" Content="Remove Server" Grid.Column="2" HorizontalAlignment="Left" Margin="134.807,83,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="btn_" Content="?" Grid.Column="2" HorizontalAlignment="Left" Margin="134.807,108,0,0" VerticalAlignment="Top" Width="75"/>
+    </Grid>
+</Window>
