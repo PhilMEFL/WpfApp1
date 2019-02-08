@@ -6,19 +6,42 @@
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="54*"/>
-            <ColumnDefinition Width="25*"/>
-            <ColumnDefinition Width="713*"/>
-        </Grid.ColumnDefinitions>
-        <ListBox x:Name="lbxServers" Grid.Column="1" HorizontalAlignment="Left" Height="108" Margin="10,33,0,0" VerticalAlignment="Top" Width="136" Background="#FF52B092" Grid.ColumnSpan="2">
-            <ListBoxItem/>
-        </ListBox>
-        <Label x:Name="lblServers" Content="List of servers" Grid.Column="1" HorizontalAlignment="Left" Margin="10,7,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
-        <Button x:Name="btnAll" Content="All Servers" Grid.Column="2" HorizontalAlignment="Left" Margin="134.807,33,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button x:Name="btnAdd" Content="Add server" Grid.Column="2" HorizontalAlignment="Left" Margin="134.807,58,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button x:Name="btnRemove" Content="Remove Server" Grid.Column="2" HorizontalAlignment="Left" Margin="134.807,83,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button x:Name="btn_" Content="?" Grid.Column="2" HorizontalAlignment="Left" Margin="134.807,108,0,0" VerticalAlignment="Top" Width="75"/>
-    </Grid>
+	<Grid>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="54*"/>
+			<ColumnDefinition Width="25*"/>
+			<ColumnDefinition Width="713*"/>
+		</Grid.ColumnDefinitions>
+		<StackPanel Margin="246,66,121,-17" Grid.Column="2">
+			<ListBox x:Name="lbxServers" Grid.Column="1" HorizontalAlignment="Left" Height="108" Margin="10,33,0,0" VerticalAlignment="Top" Width="136" Background="#FF52B092" Grid.ColumnSpan="2">
+				<ListBoxItem Content="DC01"/>
+				<ListBoxItem Content="DC02recup"/>
+				<ListBoxItem Content="DC03"/>
+				<ListBoxItem Content="vSQL"/>
+			</ListBox>
+			<Label x:Name="lblServers" Content="List of servers" Grid.Column="1" HorizontalAlignment="Left" Margin="10,7,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+			<Button x:Name="btnAll" Content="All Servers" Grid.Column="2" HorizontalAlignment="Left" Margin="134.807,33,0,0" VerticalAlignment="Top" Width="75"/>
+			<Button x:Name="btnAdd" Content="Add server" Grid.Column="2" HorizontalAlignment="Left" Margin="134.807,58,0,0" VerticalAlignment="Top" Width="75"/>
+			<Button x:Name="btnRemove" Content="Remove Server" Grid.Column="2" HorizontalAlignment="Left" Margin="134.807,83,0,0" VerticalAlignment="Top" Width="75"/>
+			<Button x:Name="btn_" Content="?" Grid.Column="2" HorizontalAlignment="Left" Margin="134.807,108,0,0" VerticalAlignment="Top" Width="75"/>
+		</StackPanel>
+		<StackPanel Grid.ColumnSpan="3" Margin="0,0,467,13">
+			<TextBlock Margin="10" FontSize="20" RenderTransformOrigin="8.056,1.652">How do you like your coffee?</TextBlock>
+			<Button Margin="10">Black</Button>
+			<Button Margin="10">With milk</Button>
+			<Button Margin="10">Latte machiato</Button>
+			<Button Margin="10">Cappuccino</Button>
+		</StackPanel>
+		<ListView x:Name="lvDisks" Grid.Column="2" HorizontalAlignment="Left" Height="100" Margin="304,309,0,0" VerticalAlignment="Top" Width="100" Background="Magenta">
+			<ListView.View>
+				<GridView>
+					<GridViewColumn Header="Drive Letter" Width="100"/>
+					<GridViewColumn Header="Drive Label" Width="100"/>
+					<GridViewColumn Header="Size (MB)" Width="100"/>
+					<GridViewColumn Header="Free space %" Width="100"/>
+				</GridView>
+			</ListView.View>
+		</ListView>
+		<TextBox Text="https://stackoverflow.com/questions/932510/how-do-i-space-out-the-child-elements-of-a-stackpanel" Grid.ColumnSpan="2" Margin="10,295,23,73" Grid.Column="1"/>
+	</Grid>
 </Window>
